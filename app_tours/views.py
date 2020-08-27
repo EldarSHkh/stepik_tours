@@ -1,6 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from django.views import View
+
 from app_tours.data import departures, description, tours, title, subtitle
 
 

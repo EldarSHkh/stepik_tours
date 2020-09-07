@@ -9,7 +9,8 @@ from app_tours.data import departures, description, tours, title, subtitle
 
 class MainView(View):
     def get(self, request, *args, **kwargs):
-        random_tour_id = random.sample(range(1, len(tours)), 6)
+        number_tours = 6
+        random_tour_id = random.sample(range(1, len(tours)), number_tours)
         tour = {tour_id: tours[tour_id] for tour_id in random_tour_id}
         context = {
             "title": title,

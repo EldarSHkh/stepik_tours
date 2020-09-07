@@ -12,14 +12,14 @@
 	<!-- CARDS -->
 
 	<div class="row mt-5" data-test="cards">
-		{% for key,value in tours.items %}
+		{% for id, data in tours.items %}
 		<div class="col-4" data-test="card">
 			<div class="card mb-3" >
-				<img src="{{ value.picture }}" class="card-img-top img-fluid" data-test="picture">
+				<img src="{{  data.picture }}" class="card-img-top img-fluid" data-test="picture">
 				<div class="card-body">
-					<h5 class="card-title">{{ value.country }}: {{  value.title }}    {{ value.stars }}★</h5>
-					<p class="card-text">{{ value.description }}</p>
-					<a href="/tour/{{ key }}" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
+					<h5 class="card-title">{{  data.country }}: {{   data.title }}    {{  data.stars }}★</h5>
+					<p class="card-text">{{  data.description }}</p>
+					<a href="/tour/{{ id }}" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
 				</div>
 			</div>
 		</div>
